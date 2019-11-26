@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "Gali.AppServer";
+
+
+
+// The greeting service definition.
+service Commands {
+  // Sends a greeting
+  rpc Execute (ExecuteRequest) returns (ExecuteReply);
+}
+
+// The request message containing the user's name.
+message ExecuteRequest {
+  string input = 1;
+}
+
+// The response message containing the greetings.
+message ExecuteReply {
+  string message = 1;
+}
