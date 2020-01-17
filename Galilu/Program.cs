@@ -93,11 +93,11 @@ namespace Galilu
                     }
                     else if (itemC[0] == "")
                     {
-                        var fields = itemC[1].Split(',').Select(x => x.Split(' ')).ToArray();
+                        var fields = itemC[1].Trim().Split(',').Select(x => x.Trim().Split(' ')).ToArray();
                         jsonString.Append("{");
                         foreach (var item2 in fields)
                         {
-                            jsonString.Append($"\"Type\":\"{item2[0]}\",\"VarName\":\"{item2[1]}\"");
+                            jsonString.Append($"\"{item2[0]}\":\"{item2[1]}\",");
                         }
                         jsonString.Append("},");
                     }
