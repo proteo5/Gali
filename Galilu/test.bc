@@ -1,0 +1,11 @@
+Namespace: Galilu.Entities	
+	Entity: User
+		Model:
+			:string User
+			:string Names
+			:string LastName
+			:string Password
+			:string PasswordSalt
+			:string State
+		End:
+	
