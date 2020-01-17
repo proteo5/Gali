@@ -1,9 +1,9 @@
-﻿using Mustache;
+﻿using HandlebarsDotNet;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Stubble.Core.Builders;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -32,12 +32,9 @@ namespace Galilu
 
             //Get Data to compile
             string jsonString = CreateJson(args[0]);
-            //dynamic data = JsonConvert.DeserializeObject<dynamic>(jsonString)
-            var data = JObject.Parse(jsonString);
 
             //Render compiled file
-            string template = Render(".\\Templates\\Entity.cs.template", data);
-            template = template.Replace(";",";\r").Replace("{", "{\r").Replace("}", "}\r");
+            string template = Render(".\\Templates\\Entity.cs.template", jsonString);
 
             //Write file
             var fileWriter = new System.IO.StreamWriter(newFile);
@@ -124,20 +121,18 @@ namespace Galilu
             return file;
         }
 
-        static string Render(string templateFilePath, JObject data)
+        static string Render(string templateFilePath, string data)
         {
             string input;
-            string output;
             using (StreamReader streamReader = new StreamReader(templateFilePath, Encoding.UTF8))
             {
                 input = streamReader.ReadToEnd();
             }
-            //var stubble = new StubbleBuilder().Build();
-            //output = stubble.Render(input, data);
-            FormatCompiler compiler = new FormatCompiler();
-            Generator generator = compiler.Compile(input);
-            string result = generator.Render(data);
-            //Console.Out.WriteLine(result);
+
+            ExpandoObject source = JsonConvert.DeserializeObject<ExpandoObject>(data);
+            var template = Handlebars.Compile(input);
+            var result = template(source);
+
             return result;
         }
 
