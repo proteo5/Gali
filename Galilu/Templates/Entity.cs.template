@@ -5,7 +5,7 @@ using System.Text;
 namespace {{Namespace}}
 {
     public class {{Entity}}
-    {
-        
-    }
+    { {{#each Model}}
+        public {{Type}} {{VarName}};
+   {{/each}} }
 }

@@ -97,7 +97,7 @@ namespace Galilu
                         jsonString.Append("{");
                         foreach (var item2 in fields)
                         {
-                            jsonString.Append($"\"{item2[0]}\":\"{item2[1]}\",");
+                            jsonString.Append($"\"Type\":\"{item2[0]}\",\"VarName\":\"{item2[1]}\"");
                         }
                         jsonString.Append("},");
                     }
