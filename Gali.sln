@@ -7,10 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrayCat.Server", "GrayCat.S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gali", "Gali\Gali.csproj", "{57F2A0CA-71EA-435D-8270-4E9280263480}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrayCat.AppServer", "GrayCat.AppServer\GrayCat.AppServer.csproj", "{0BA083F7-1120-4CE6-B79A-2E30B4B1A1B7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galilu", "Galilu\Galilu.csproj", "{A632B1D8-B9D4-4D4E-8B27-DA50F439C57A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{57F2A0CA-71EA-435D-8270-4E9280263480}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57F2A0CA-71EA-435D-8270-4E9280263480}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57F2A0CA-71EA-435D-8270-4E9280263480}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0BA083F7-1120-4CE6-B79A-2E30B4B1A1B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0BA083F7-1120-4CE6-B79A-2E30B4B1A1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0BA083F7-1120-4CE6-B79A-2E30B4B1A1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0BA083F7-1120-4CE6-B79A-2E30B4B1A1B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A632B1D8-B9D4-4D4E-8B27-DA50F439C57A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A632B1D8-B9D4-4D4E-8B27-DA50F439C57A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A632B1D8-B9D4-4D4E-8B27-DA50F439C57A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A632B1D8-B9D4-4D4E-8B27-DA50F439C57A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
